@@ -1,16 +1,21 @@
 # tests/test_minesweeper.py
 
-import pytest
 import random
+
+import pytest
+
 from src import minesweeper
+
 
 def test_module_exists():
     assert minesweeper
+
 
 def test_place_mines():
     game = minesweeper.Minesweeper(3, 3, 2)
     game.place_mines()
     assert len(game.mines) == 2
+
 
 def test_reveal():
     random.seed(0)
